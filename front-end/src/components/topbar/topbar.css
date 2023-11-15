@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Fredericka+the+Great&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
+
+.topbar{
+    display: flex;
+    height: 70px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--box-shadow);
+}
+.wrapper-topbar-lc{
+    display: flex;
+    align-items: center;
+    flex: 7;
+}
+
+.leftbar-menu{
+    display: none;
+}
+
+.topbarLeft{
+    flex: 3;
+    padding-right: 10px;
+}
+
+.topbarCenter{
+    flex: 4;
+}
+
+.topbarRight{
+    flex: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo, .logo-mb{
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 2.5rem;
+}
+
+.logo-mb{
+    display: none;
+}
+
+.searchbar{
+    width: 90%;
+    background-color: #ffff;
+    height: 40px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #eee;
+    outline: none;
+    /* box-shadow: var(--box-shadow); */
+}
+.search-input{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    padding: 0 15px;
+    font-size: 16px;
+    border: none;
+}
+
+
+.btn-search{
+    display: flex;
+    align-items: center;
+    width: 50px;
+    padding: 0px 15px;
+    font-size: 1.6rem;
+    height:100%;
+    border-top-right-radius: 50%;
+    border-left: 1px solid #eee;
+    cursor: pointer;
+}
+.searchbar:focus-within{
+    outline-offset: -1px;
+    outline: 1px solid var(--icon);
+}
+
+.dark .searchbar:focus-within{
+    outline: 2px solid var(--icon-dark);
+    outline-offset: -2px;
+}
+
+.topbarIcons{
+    display: flex;
+    flex: 9;
+    align-items: center;
+    justify-content: space-around;
+}
+.avatar-mini{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.icon-item{
+    position: relative;
+    cursor: pointer;
+}
+
+.icon-item .icon{
+    font-size: 30px;
+}
+
+.notify{
+    position: absolute;
+    display: flex;
+    color: #ffff;
+    align-items: center;
+    justify-content: center;
+    width: 12px;
+    height: 12px;
+    background-color: var(--red);
+    border-radius: 50%;
+    top: -4px;
+    right: -4px;
+    font-size: 10px;
+}
+
+
+
+/* Media query */
+
+@media screen and (max-width: 768px) {
+    .topbar{
+        display: block;
+        height: 110px;
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+        box-shadow: var(--box-shadow);
+    }
+
+    .leftbar-menu{
+        display: block;
+        padding: 0 0 0 7px;
+        cursor: pointer;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .logo-mb{
+        display: block;
+        font-size: 2rem;
+    }
+
+    .topbarLeft{
+        flex: 2;
+    }
+
+    .searchbar{
+        height: 28px;
+        font-size: 14px;
+    }
+
+    .topbarIcons{
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    .topbarRight{
+        padding: 8px 0px;
+        border-top: 1px solid var(--light-color);
+        gap: 10px;
+    }
+
+    .wrapper-topbar-lc{
+        padding: 10px 0;
+    }
+
+    .topbarLeft{
+        flex: 1;
+        padding-right: 10px;
+    }
+    
+    .topbarCenter{
+        flex: 5;
+    }
+    .search-input{
+        font-size: 12px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 576px) {
+    .icon{
+        font-size: 25px;
+    }
+    .avatar-mini{
+        width: 25px;
+        height: 25px;
+    }
+    .topbarIcons{
+        flex: 9;
+    }
+    .avatar-mini{
+        flex: 1;
+    }
+
+    .wrapper-topbar-lc{
+        padding: 14px 0;
+    }
+
+    .logo{
+        font-size: 2rem;
+        /* padding-right: 20px; */
+    }
+    .icon-item .icon{
+        font-size: 25px;
+    }
+
+}
