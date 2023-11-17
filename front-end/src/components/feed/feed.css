@@ -1,0 +1,20 @@
+.feed{
+    display: flex;
+    justify-content: center;
+}
+
+.feed-wrapper{
+    width: 45vw;
+    height:500px;
+}
+
+@media screen and (max-width: 768px){
+    .feed{
+        justify-content: flex-end;
+        height:calc(100vh - 110px) ; 
+    }
+    .feed-wrapper{
+        padding: 0;
+        width: 70vw;
+    }
+}

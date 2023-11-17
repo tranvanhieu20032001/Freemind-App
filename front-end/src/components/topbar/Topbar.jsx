@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useContext } from "react";
 
-import './topbar.css'
-import Tippy from '@tippyjs/react';
+import "./topbar.css";
+import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
-import {BsBellFill, BsFillChatTextFill, BsHouseHeartFill, BsPersonFillAdd, BsSearch} from 'react-icons/bs'
-import {MdFormatListBulleted} from "react-icons/md"
+import {
+  BsBellFill,
+  BsFillChatTextFill,
+  BsHouseHeartFill,
+  BsPersonFillAdd,
+  BsSearch,
+} from "react-icons/bs";
+import {FaTimes} from 'react-icons/fa'
+import { MdFormatListBulleted } from "react-icons/md";
+import { showLeftBarContext } from "../../App";
 function Topbar() {
+  const context = useContext(showLeftBarContext);
   const icons = [
     {
       id: 1,
@@ -53,8 +62,8 @@ function Topbar() {
     <div className="topbar background container">
       <div className="wrapper-topbar-lc">
         <div className="topbarLeft">
-            <h1 className="logo">FREEMIND</h1>
-            <h1 className="logo-mb">FM</h1>
+          <h1 className="logo">FREEMIND</h1>
+          <h1 className="logo-mb">FM</h1>
         </div>
 
         <div className="topbarCenter">
@@ -71,8 +80,12 @@ function Topbar() {
             </Tippy>
           </div>
         </div>
-        <div className="leftbar-menu">
-          <MdFormatListBulleted size={25} className="icon" />
+        <div className="leftbar-menu" onClick={context._showLeftbar}>
+          {context.showleftbar ? (
+            <FaTimes size={25} className="icon" />
+            ) : (
+              <MdFormatListBulleted size={25} className="icon" />
+          )}
         </div>
       </div>
 
@@ -86,11 +99,6 @@ function Topbar() {
               </div>
             </Tippy>
           ))}
-          <Tippy content="Darkmode">
-            <div className="icon-item darktheme">
-              {/* <DarkMode /> */}
-            </div>
-          </Tippy>
         </div>
         <Tippy content="Account">
           <div className="avatar-mini">
@@ -106,4 +114,4 @@ function Topbar() {
   );
 }
 
-export default Topbar
+export default Topbar;
