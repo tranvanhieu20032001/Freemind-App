@@ -2,7 +2,7 @@
 :root {
   /* --background: rgb(204, 251, 255); */
   /* --background-dark: rgb(43, 88, 118); */
-  --background: linear-gradient(135deg, rgba(191, 233, 255, 0.619) 35%, rgba(232, 178, 235, 0.5) 90%);
+  /* --background: linear-gradient(135deg, rgba(191, 233, 255, 0.619) 35%, rgba(232, 178, 235, 0.5) 90%); */
   --background-dark-rd: linear-gradient(135deg, rgba(165, 201, 204, 0.708) 0, rgba(43, 88, 118, 1) 50%);
   --icon: rgb(66, 189, 200);
   --icon-dark:#c7e996;
