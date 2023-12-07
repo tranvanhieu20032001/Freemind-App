@@ -3,6 +3,17 @@
     justify-content: center;
 }
 
+.overlay {
+    display: none;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+    filter: blur(1px);
+  }
+  .overlay.active {
+    display: block;
+    z-index: 1;
+  }
+
 .feed-wrapper{
     width: 45vw;
     height:500px;
