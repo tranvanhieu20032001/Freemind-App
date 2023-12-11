@@ -1,0 +1,72 @@
+.share{
+    box-shadow: var(--box-shadow);
+    background: var(--first-color);
+    padding:10px;
+    margin: 30px 0px;
+}
+
+.share-top{
+    display: flex;
+    align-items: center;
+}
+
+.share-bottom{
+    display: flex;
+}
+
+.share-input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 0 5px;
+}
+
+.share-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    gap: 10px;
+}
+
+.share-options{
+    display: flex;
+    flex: 8;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.share-option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.share-option >span{
+    margin-left: 5px;
+}
+
+
+@media screen and (max-width: 768px){
+  
+}
+
+@media screen and (max-width: 576px) {
+
+    .share{
+        margin: 5px 0px 30px;
+    }
+
+    .share-input{
+        font-size: 12px;
+    }
+    .share-option{
+       font-size: 12px;
+    }
+}

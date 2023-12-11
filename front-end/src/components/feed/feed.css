@@ -1,21 +1,22 @@
 .feed{
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .overlay {
-    display: none;
-    width: 100vw;
-    background: rgba(0, 0, 0, 0.5);
-    filter: blur(1px);
-  }
-  .overlay.active {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
     display: block;
-    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    /* filter: blur(1px); */
   }
 
 .feed-wrapper{
-    width: 45vw;
+    min-width: 45vw;
     height:500px;
 }
 
@@ -26,6 +27,7 @@
     }
     .feed-wrapper{
         padding: 0;
-        width: 70vw;
+        flex: 1;
+        padding: 20px 10px;
     }
 }

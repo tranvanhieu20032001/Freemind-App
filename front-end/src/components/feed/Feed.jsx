@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { showLeftBarContext } from "../../App";
 import './feed.css'
+import Share from "../share/Share";
 
 function Feed() {
 
@@ -20,10 +21,11 @@ function Feed() {
 
   const context = useContext(showLeftBarContext)
   return (
-    <div className={`feed overlay ${isScreenSmall && context.showleftbar?'active':''}`}>
+    <div className={`feed`}>
       <div className="feed-wrapper">
-        
+      <Share/>
       </div>
+      <div className={`${isScreenSmall && context.showleftbar?'overlay':''}`}></div>
     </div>
   )
 }
