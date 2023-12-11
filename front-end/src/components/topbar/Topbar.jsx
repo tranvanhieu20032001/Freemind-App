@@ -99,9 +99,8 @@ function Topbar() {
               </div>
             </Tippy>
           ))}
-        </div>
-        <Tippy content="Account">
-          <div className="avatar-mini">
+          <Tippy content="Account">
+          <div className="">
             <img
               className="avatar"
               src="https://hocdohoacaptoc.com/wp-content/uploads/2022/02/avata-dep-nam-2.jpg"
@@ -109,6 +108,7 @@ function Topbar() {
             />
           </div>
         </Tippy>
+        </div>
       </div>
     </div>
   );

@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import {
   MdGroup,
   MdRssFeed,
-  MdStorefront,
   MdVideoLibrary,
 } from "react-icons/md";
 import {
@@ -148,7 +147,7 @@ function Leftbar() {
         </div>
       </div>
 
-      <div className={`overlay ${isScreenSmall && context.showleftbar?'active':''}`}></div>
+      {/* <div className={`overlay ${isScreenSmall && context.showleftbar?'active':''}`}></div> */}
     </div>
   );
 }
